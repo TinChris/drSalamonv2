@@ -93,4 +93,22 @@
         }, index * 100);
       });
     }, 200);
+
+    (function () {
+    const link = document.getElementById("ctaLink");
+    const targetSel = link.getAttribute("data-target") || "#contact";
+    const targetEl = document.querySelector(targetSel);
+
+    // Sehr simple Mobile-Erkennung (ausreichend für unseren Zweck)
+    const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+
+    if (!isMobile && targetEl) {
+      // Auf Desktop: Telefonieren ist meist sinnlos → scrollen statt anrufen
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+    // Auf Mobile lassen wir href="tel:..." einfach wirken
+  })();
  

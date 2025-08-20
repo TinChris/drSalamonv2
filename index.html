@@ -198,11 +198,18 @@
 
   <!-- Floating Action Button -->
   <button class="fab bounce" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" title="Időpontfoglalás">
-  <span>
-  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24">
+  <a id="ctaLink"
+   class="call-fab"
+   href="tel:+3612345678"
+   title="Időpontfoglalás"
+   aria-label="Időpontfoglalás"
+   data-target="#contact">
+  <!-- SVG nutzt currentColor => per CSS weiß -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+       width="22" height="22" fill="white" aria-hidden="true">
     <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21 3 13.93 3 5.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58.13.34.04.73-.24 1.01l-2.2 2.2z"/>
   </svg>
-</span>
+</a>
 
   </button>
 
